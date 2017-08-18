@@ -1,0 +1,59 @@
+<!-- <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav> -->
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <div class="login">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" #f="ngForm" (ngSubmit)="onSubmit()">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input
+                    name="email"
+                    id="inputEmail"
+                    type="email"
+                    class="form-control"
+                    placeholder="Email address"
+                    ngModel
+                    autofocus
+                    required
+                    email
+                    >
+                <input
+                    name="password"
+                    id="inputPassword"
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    ngModel
+                    required
+                    >
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button   class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+            <!-- <a href="#" class="forgot-password">
+                Forgot the password?
+            </a> -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
