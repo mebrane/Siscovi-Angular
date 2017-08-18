@@ -1,5 +1,6 @@
 import { ApolloModule } from 'apollo-angular';
 import { AuthModule } from '../-auth/-auth.module';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './dashboard/footer/footer.component';
@@ -17,6 +18,7 @@ import { SharedModule } from './../-shared/-shared.module';
     CommonModule,
     ApolloModule.forRoot(provideClient),
     RouterModule.forRoot(routes),
+    BsDropdownModule.forRoot(),
     SharedModule,
     AuthModule,
   ],
