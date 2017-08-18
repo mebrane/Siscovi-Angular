@@ -11,18 +11,7 @@ export const routes: Routes = [
     pathMatch: 'full',
     redirectTo: '/dashboard'
   },
-  {
-    path: 'dashboard', children: [
-      {
-        path: '',
-        component: DashboardComponent
-      },
-      {
-        path: '**',
-        component: NotFoundComponent
-      }
-    ]
-  },
+
   { path: 'login', component: LoginComponent },
   { path: '**', component: NotFoundComponent },
 ];
