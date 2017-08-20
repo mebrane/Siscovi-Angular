@@ -12,8 +12,9 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-              <li routerLinkActive="active" ><a routerLink="/clientes">Clientes</a></li>
-              <li routerLinkActive="active"><a [routerLink]="['link2']">Link2</a></li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/dashboard" >Profile</a></li>
+              <li routerLinkActive="active" ><a routerLink="/dashboard/clientes">Clientes</a></li>
+              <li routerLinkActive="active"><a [routerLink]="['dashboard/link2']">Link2</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li *ngIf="!loggedIn" routerLinkActive="active"><a routerLink="/login">Login</a></li>

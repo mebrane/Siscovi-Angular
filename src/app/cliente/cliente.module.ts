@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
   ],
   declarations: [ClienteComponent, ClienteFormComponent, ClienteListComponent],
   exports: [
-    RouterModule
+   //  RouterModule
   ]
 })
 export class ClienteModule { }
