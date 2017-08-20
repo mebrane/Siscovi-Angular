@@ -1,4 +1,3 @@
-import { ClienteModule } from '../../cliente/cliente.module';
 import { CommonModule } from '@angular/common';
 import { DashboardRouting } from './dashboard.routing';
 import { NgModule } from '@angular/core';

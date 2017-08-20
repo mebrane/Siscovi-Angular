@@ -1,7 +1,6 @@
 import { ApolloModule } from 'apollo-angular';
 import { AuthModule } from '../-auth/-auth.module';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ClienteModule } from '../cliente/cliente.module';
 import { CommonModule } from '@angular/common';
 import { CoreRouting } from './core.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';

@@ -5,6 +5,7 @@ import {
   ViewChild,
   ViewEncapsulation
   } from '@angular/core';
+import { CounterService } from './../../-shared/counter.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 declare var jQuery: any;
@@ -19,13 +20,14 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   @ViewChild('f') loginForm: NgForm;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private countSrv: CounterService) {
 
    }
 
   ngOnInit() {
     $('body').addClass('app-login');
     $('html').addClass('app-login');
+    this.countSrv.upCounter();
 
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from '../-shared/counter.service';
 
 @Component({
   selector: 'app-customer',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private countSrv: CounterService) { }
 
   ngOnInit() {
+    this.countSrv.upCounter();
   }
 
 }
