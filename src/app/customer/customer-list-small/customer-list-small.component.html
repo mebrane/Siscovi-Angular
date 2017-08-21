@@ -1,0 +1,27 @@
+<table class="table table-hover table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>RUC</th>
+      <th>Razón Social</th>
+      <th>Dirección</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers;let i = index;" (click)="onSelectCustomer(customer)">
+
+      <td>{{i+1}}</td>
+      <td>{{customer.RUC}}</td>
+      <td>{{customer.razonSocial}}</td>
+      <td>{{customer.direccion}}</td>
+      <td>
+        <!-- <a [routerLink]="[{ outlets: { 'sidebar': ['app-customer-detail'] } }]">
+            Detail
+        </a> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet name="sidebar"></router-outlet>

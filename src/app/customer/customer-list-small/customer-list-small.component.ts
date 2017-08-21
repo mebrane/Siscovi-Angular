@@ -4,11 +4,11 @@ import { Customer } from './../customer.model';
 import { CustomerService } from './../customer.service';
 
 @Component({
-  selector: 'app-customer-list',
-  templateUrl: './customer-list.component.html',
-  styleUrls: ['./customer-list.component.css']
+  selector: 'app-customer-list-small',
+  templateUrl: './customer-list-small.component.html',
+  styleUrls: ['./customer-list-small.component.css']
 })
-export class CustomerListComponent implements OnInit {
+export class CustomerListSmallComponent implements OnInit {
 
   customers: Customer[];
 
@@ -28,7 +28,6 @@ export class CustomerListComponent implements OnInit {
   onSelectCustomer(c: Customer) {
     // console.log('c', c);
     const id = c.id;
-    this.router.navigate([id], {relativeTo: this.route});
+    this.router.navigate([id], { relativeTo: this.route });
   }
-
 }
